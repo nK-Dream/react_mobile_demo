@@ -2,14 +2,17 @@ const { override, fixBabelImports, addLessLoader,addPostcssPlugins } = require('
 
 module.exports = override(
     fixBabelImports('import', {
-        libraryName: 'antd',
+        libraryName: 'antd-mobile',
         libraryDirectory: 'es',
         style: true,
     }),
     addLessLoader({
         lessOptions:{
             javascriptEnabled: true,
-            modifyVars: { '@primary-color': '#1DA57A' },
+            modifyVars: { 
+                '@brand-primary': '#E1251B',
+                '@brand-Primary-tap': '#ac1d15'
+            },
         }
     }),
     addPostcssPlugins([require('postcss-px2rem')({remUnit:375/10})])
