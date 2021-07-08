@@ -10,7 +10,7 @@ export default class Login extends Component {
         code: '',
         canClick: true,
         time: timeCode
-    }
+    } 
 
     login = () => {
         const { phone, code } = this.state;
